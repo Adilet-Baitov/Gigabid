@@ -1,0 +1,48 @@
+footer {
+    background-color: $dark;
+    width: 100%;
+    height: fit-content;
+    color: $white;
+    padding: 2rem 0;
+    .footer {
+        
+
+        &__blocks {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+
+        }
+
+        &__block {
+            display: grid;
+            grid-template-rows: 1fr 5fr;
+
+            &--title {
+                text-transform: uppercase !important;
+                font-size: 1.5rem;
+            }
+        }
+
+        &__link  {
+            .link {
+                transition: 0.3s ease;
+                color: $white !important;
+                &:hover {
+                    transition: 0.3s ease;
+                    color: $primary !important;
+                }
+            }
+            
+        }
+    }
+
+    .ul {
+        &__flex {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+        }
+    }
+}

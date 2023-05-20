@@ -1,0 +1,30 @@
+// @ IMPORT BASE
+@import 'base/_reset';
+@import 'base/_colors';
+@import 'base/_text';
+@import 'base/_ui';
+@import 'base/_animations';
+
+// @ IMPORT COMPONENTS
+@import 'components/_header';
+@import 'components/_main';
+@import 'components/_footer';
+
+// @ PAGE
+body {
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+// @ MEDIA SCREEN
+@import 'base/_media';
