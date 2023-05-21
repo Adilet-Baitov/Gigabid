@@ -1,3 +1,12 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    z-index: 10;
+}
+
 .header {
     box-shadow: 0px 0px 15px -1px rgba(34, 60, 80, 0.2) inset;
 }
@@ -6,7 +15,7 @@
     width: 100vw;
     height: 40px;
     background-color: $bg-color1;
-    padding: 3px 0;
+    padding: 3px 0; 
     &__block {
         display: flex;
         align-items: center;
@@ -18,21 +27,28 @@
         font-size: 18px;
         line-height: 22px;
     }
+    &__links {
+        span {
+            color: $white;
+        }
+    }
+
     &__link {
-        background-color: $primary;
         padding: 5px 10px;
         border-radius: 5px;
         font-size: 1rem;
         text-decoration: none;
-        color: $dark;
+        color: $white !important;
+        transition: all 0.3s;
         &:hover {
-            background-color: $secondary;
-            border-color: $secondary;
+            text-decoration: underline;
         }
         &:focus {
-            background-color: $primary-op;
-            border-color: $primary-op;
+            color: $primary;
         }
+    }
+    .button {
+        color: $white !important;
     }
 }
 

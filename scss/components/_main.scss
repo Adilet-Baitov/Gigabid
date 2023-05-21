@@ -1,3 +1,8 @@
+main {
+    margin-top: 9rem;
+}
+
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -14,6 +19,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    height: 600px;
 
     &:hover {
         & .slider__layout2 {
@@ -25,6 +31,7 @@
         height: auto;
         object-position: center;
         object-fit: cover;
+        background-size: cover;
     }
     
     &__layout2 {
@@ -67,8 +74,8 @@
         }
     }
     &__pagination {
-        width: 20%;
-        height: 30%;
+        width: 25%;
+        height: 35%;
         position: absolute;
         bottom: 10%;
         right: 5%;
@@ -77,20 +84,31 @@
         display: flex;
         gap: 20px;
 
-        span {
-            display: block;
-            width: 30% ;
-            height: 100%;
-            background-color: #fff;
-            object-position: center;
-            object-fit: fill;
-            border-radius: 10px;
+        
+    }
+    &__preview {
+        width: 30% ;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 10px;
+        background-image: url(/img/layout1.jpg);
+        object-position: center;
+        background-size: cover;
+        background-position: center;
 
+        -o-object-position: center !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-            &:nth-child(2) {
-                transform: scale(1.2);
+            h5 {
+                font-size: 2rem;
+                color: $white;
+                font-weight: 500;
             }
-        }
+        // &:nth-child(2) {
+        //     transform: scale(1.2);
+        // }
     }
 }
 
@@ -291,6 +309,15 @@
         border: 1px solid $primary;
         border-radius: 4px;
         resize: vertical;
+        &:hover {
+            border: 1px solid $bg-color1;
+        }
+        &:focus {
+            border: 1px solid $secondary;
+            box-shadow: 0px 0px 3px 0px rgba(149,189,27,0.75);
+            -webkit-box-shadow: 0px 0px 3px 0px rgba(7, 8, 2, 0.75);
+            -moz-box-shadow: 0px 0px 3px 0px rgba(149,189,27,0.75);
+        }
     }
 
     textarea {
@@ -299,6 +326,15 @@
         border: 1px solid $primary;
         border-radius: 4px;
         resize: vertical;
+        &:hover {
+            border: 1px solid $bg-color1;
+        }
+        &:focus {
+            border: 1px solid $secondary;
+            box-shadow: 0px 0px 3px 0px rgba(149,189,27,0.75);
+            -webkit-box-shadow: 0px 0px 3px 0px rgba(149,189,27,0.75);
+            -moz-box-shadow: 0px 0px 3px 0px rgba(149,189,27,0.75);
+        }
     }
     button {
         margin: 0 auto;

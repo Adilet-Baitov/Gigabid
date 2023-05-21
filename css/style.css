@@ -409,6 +409,15 @@ input[type=number]:focus {
           animation: infinite arrow-right 2s linear;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
 .header {
   -webkit-box-shadow: 0px 0px 15px -1px rgba(34, 60, 80, 0.2) inset;
           box-shadow: 0px 0px 15px -1px rgba(34, 60, 80, 0.2) inset;
@@ -436,21 +445,27 @@ input[type=number]:focus {
   font-size: 18px;
   line-height: 22px;
 }
+.header-up__links span {
+  color: #ffffff;
+}
 .header-up__link {
-  background-color: #95BD1B;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 1rem;
   text-decoration: none;
-  color: #333333;
+  color: #ffffff !important;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .header-up__link:hover {
-  background-color: #A0C81E;
-  border-color: #A0C81E;
+  text-decoration: underline;
 }
 .header-up__link:focus {
-  background-color: rgba(255, 255, 0, 0.8);
-  border-color: rgba(255, 255, 0, 0.8);
+  color: #95BD1B;
+}
+.header-up .button {
+  color: #ffffff !important;
 }
 
 .header__column {
@@ -480,6 +495,10 @@ input[type=number]:focus {
   width: 150px;
 }
 
+main {
+  margin-top: 9rem;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -501,6 +520,7 @@ input[type=number]:focus {
   width: 100%;
   position: relative;
   overflow: hidden;
+  height: 600px;
 }
 .slider:hover .slider__layout2 {
   opacity: 1;
@@ -512,6 +532,7 @@ input[type=number]:focus {
      object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
+  background-size: cover;
 }
 .slider__layout2 {
   width: 100%;
@@ -553,8 +574,8 @@ input[type=number]:focus {
   opacity: 0.4;
 }
 .slider__pagination {
-  width: 20%;
-  height: 30%;
+  width: 25%;
+  height: 35%;
   position: absolute;
   bottom: 10%;
   right: 5%;
@@ -565,21 +586,30 @@ input[type=number]:focus {
   display: flex;
   gap: 20px;
 }
-.slider__pagination span {
-  display: block;
+.slider__preview {
   width: 30%;
   height: 100%;
   background-color: #fff;
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: fill;
-     object-fit: fill;
   border-radius: 10px;
+  background-image: url(/img/layout1.jpg);
+  object-position: center;
+  background-size: cover;
+  background-position: center;
+  -o-object-position: center !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.slider__pagination span:nth-child(2) {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
+.slider__preview h5 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .globus {
@@ -770,12 +800,30 @@ input[type=number]:focus {
   border-radius: 4px;
   resize: vertical;
 }
+.feedback-form input[type=text]:hover {
+  border: 1px solid #004831;
+}
+.feedback-form input[type=text]:focus {
+  border: 1px solid #A0C81E;
+  box-shadow: 0px 0px 3px 0px rgba(149, 189, 27, 0.75);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(7, 8, 2, 0.75);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(149, 189, 27, 0.75);
+}
 .feedback-form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #95BD1B;
   border-radius: 4px;
   resize: vertical;
+}
+.feedback-form textarea:hover {
+  border: 1px solid #004831;
+}
+.feedback-form textarea:focus {
+  border: 1px solid #A0C81E;
+  box-shadow: 0px 0px 3px 0px rgba(149, 189, 27, 0.75);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(149, 189, 27, 0.75);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(149, 189, 27, 0.75);
 }
 .feedback-form button {
   margin: 0 auto;
